@@ -1,0 +1,13 @@
+.studio/
+.wrangler/
+dist/
+studio-preview.css
+studio-server.mjs
+studio.css
+studio.html
+studio.js
+terminal-variant-system.js
+variant-system.js
+variants.css
+variants.html
+variants.js
