@@ -32,6 +32,13 @@ npm run deploy
 
 The page has no analytics beacon, cookies, forms, account flow, or application backend. Its content security policy blocks third-party scripts and analytics connections.
 
+<details>
+<summary>Repository provenance</summary>
+
+The site was prepared privately before publication. Its Git history was filtered to remove internal working material while retaining the source sequence, authorship, messages, and original development timestamps.
+
+</details>
+
 ## License
 
 Code is available under `MIT OR Apache-2.0`. The Tokoro name and official visual identity are reserved.
