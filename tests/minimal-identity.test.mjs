@@ -5,6 +5,7 @@ import test from "node:test";
 const htmlPath = new URL("../index.html", import.meta.url);
 const cssPath = new URL("../styles.css", import.meta.url);
 const scriptPath = new URL("../script.js", import.meta.url);
+const headersPath = new URL("../_headers", import.meta.url);
 
 test("the signature connects the fixed threshold directly to the wordmark", async () => {
   const html = await readFile(htmlPath, "utf8");
@@ -123,11 +124,15 @@ test("the background never tracks or reacts to pointer movement", async () => {
 });
 
 test("the production page makes no audio or analytics request", async () => {
-  const [html, script] = await Promise.all([
+  const [html, script, headers] = await Promise.all([
     readFile(htmlPath, "utf8"),
     readFile(scriptPath, "utf8"),
+    readFile(headersPath, "utf8"),
   ]);
 
   assert.doesNotMatch(html, /<audio\b/i);
   assert.doesNotMatch(script, /new Audio\(|HTMLAudioElement|audio\.play\(|gtag|analytics/i);
+  assert.match(headers, /connect-src 'none'/);
+  assert.match(headers, /script-src 'self'/);
+  assert.doesNotMatch(headers, /cloudflareinsights|beacon/i);
 });
