@@ -17,6 +17,7 @@
   --ion-load-duration: 820ms;
   --copy-in: 1900ms;
   --japanese-in: 2080ms;
+  --status-in: 2240ms;
   --cta-in: 2380ms;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --load-ease: cubic-bezier(0.65, 0, 0.35, 1);
@@ -180,7 +181,8 @@ a {
 
 .identity h1,
 .tagline,
-.japanese-line {
+.japanese-line,
+.release-status {
   opacity: 0;
   transform: translateY(var(--space-2));
 }
@@ -218,6 +220,16 @@ a {
   line-height: 1.5;
   letter-spacing: 0;
   animation: identity-in 620ms var(--japanese-in) var(--ease-out) forwards;
+}
+
+.release-status {
+  margin: var(--space-2) 0 0;
+  color: rgb(244 247 247 / 42%);
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  animation: identity-in 620ms var(--status-in) var(--ease-out) forwards;
 }
 
 .github-link {

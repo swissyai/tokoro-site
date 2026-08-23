@@ -1,6 +1,6 @@
 # Tokoro site
 
-The one-screen site for [Tokoro](https://github.com/swissyai/tokoro), with the headline **A place for local models.**
+The one-screen site for the open-source [Tokoro alpha](https://github.com/swissyai/tokoro), with the headline **A place for local models.**
 
 Live at [tokoro.sh](https://tokoro.sh).
 
@@ -13,7 +13,7 @@ The page combines Tokoro's Cursor Home and Threshold identity:
 - a fixed white cursor loading bottom-to-top
 - an unlabeled causal mask and paired cache pages during the one-shot launch
 - a cyan afterglow only after impact
-- a centered Threshold mark, wordmark, headline, Japanese line, and GitHub action
+- a centered Threshold mark, wordmark, headline, Japanese line, alpha status, and GitHub action
 
 The page is dependency-free, responsive, one viewport, no scroll, and black/white/cyan. Background layers never track pointer movement. Reduced-motion preferences resolve to a static authored phrase.
 

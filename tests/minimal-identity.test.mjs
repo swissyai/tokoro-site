@@ -23,6 +23,7 @@ test("the signature connects the fixed threshold directly to the wordmark", asyn
   assert.match(html, /<h1 id="tokoro-title">TOKORO<\/h1>/);
   assert.match(html, /<p class="tagline">A place for local models\.<\/p>/);
   assert.match(html, /<p class="japanese-line" lang="ja">デジタルの自由を。<\/p>/);
+  assert.match(html, /<p class="release-status">OPEN-SOURCE ALPHA · NO USAGE TELEMETRY<\/p>/);
   assert.match(html, /<span>GitHub<\/span>/);
   assert.equal((html.match(/<a\b/g) || []).length, 1);
 });
